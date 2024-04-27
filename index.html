@@ -5,11 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>reveal.js</title>
+  <title></title>
 
   <link rel="stylesheet" href="dist/reset.css">
   <link rel="stylesheet" href="dist/reveal.css">
-  <link rel="stylesheet" href="dist/theme/black.css">
+  <link rel="stylesheet" href="dist/theme/blood.css">
+  <!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
 
   <!-- Theme used for syntax highlighted code -->
   <link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -19,17 +20,137 @@
   <div class="reveal">
     <div class="slides">
 
+      <!-- SLIDE 1 -->
       <section>
-        <h1>PRESENTATION</h1>
-        <h2>SVG: Modes, Coordinates, Basic Shapes, Accessibility, Animations</h2>
-        <h3>Под-под-заголовок</h3>
-        <h4>Под-под-под-заголовок</h4>
-        <p>Здесь могла быть ваша реклама, а будет моя презентация. И ничего тут не поделаешь. 🤓 </p>
+        <h1>SVG</h1>
+        <p class="fragment">Modes</p>
+        <p class="fragment">Coordinates</p>
+        <p class="fragment">Basic Shapes</p>
+        <p class="fragment">Accessibility</p>
+        <p class="fragment">Animations</p>
+      </section>
+
+      <!-- INTRODUTION -->
+      <section>
+        <section>
+          <h2>why SVG ?</h2>
+          <img class="r-stretch" src="./assets/typeFormatImages.jpg">
+        </section>
+        <section>
+          <img class="r-stretch" src="./assets/diffTypeImages.png">
+        </section>
+        <section>
+          <img class="r-stretch" src="./assets/formatSelection.jpg">
+        </section>
       </section>
 
 
-      <section>Slide 01</section>
-      <section>Slide 02</section>
+
+      <!-- <section></section> -->
+
+      <section>
+        <h3>Modes</h3>
+        <img class="r-stretch" src="./assets/modesSVG.jpg">
+      </section>
+
+      <section>
+        <pre><code class="XML" data-trim data-line-numbers>
+        <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+          <rect width="10" height="10">
+            <animate attributeName="rx" values="0;5;0" dur="10s" repeatCount="indefinite" />
+          </rect>
+        </svg>
+      </code></pre>
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <rect width="10" height="10">
+            <animate attributeName="rx" values="0;5;0" dur="10s" repeatCount="indefinite" />
+          </rect>
+        </svg>
+
+      </section>
+
+
+      <!-- MODES -->
+      <!-- <section></section> -->
+
+      <!-- ACESSIBILITY -->
+      <section>
+
+        <section>
+          <h3>ACESSIBILITY</h3>
+          <img class="r-stretch" src="./assets/acessibility.jpg">
+          <a href="https://www.w3.org/TR/SVG-access/">W3C - Accessibility Features of SVG</a>
+        </section>
+
+        <section>
+          <h4>Accessible SVG?</h4>
+          <p>Scalable Vector Graphics [SVG] is an Extensible Markup Language (XML) application for producing Web
+            graphics. SVG provides many accessibility benefits to disabled users, some originating from the vector
+            graphics model, some inherited because SVG is built on top of XML, and some in the design of SVG itself, for
+            example, SVG-specific elements for alternative equivalents.</p>
+        </section>
+
+        <section>
+          <h5>SVG images are scalable</h5>
+          <img class="r-stretch" src="./assets/comparsion.jpg">
+          <p> Scalable graphics can help users with low vision make sense of an image at a size that best suits their
+            needs.</p>
+        </section>
+
+        <section>
+          <ul>
+            <li>Structured images</li>
+            <li>Alternative equivalents *</li>
+            <li>XML - Plain text</li>
+            <li>XML - Stylesheets</li>
+            <li>Extended Styling</li>
+            <li>XML - DOM interface *</li>
+            <li>XML - SVG with other XML languages</li>
+          </ul>
+          <p>* can enable the use of many assistive technologies with SVG images</p>
+        </section>
+
+        <section>
+          <ul>
+            <h4>Assistive technology</h4>
+            <li>screen magnifiers</li>
+            <li>screen readers</li>
+            <li>speech recognition software</li>
+            <li>alternative keyboards</li>
+            <li>alternative pointing devices</li>
+          </ul>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h4>Equivalent Alternatives</h4>
+          <p>Providing an alternative equivalent for inaccessible content is one of the primary ways authors can make
+            their documents accessible to people with disabilities. </p>
+        </section>
+
+        <section>
+          <h5>Title and Description</h5>
+          <span>title</span>
+          <span> / </span>
+          <span>desc</span>
+
+          <pre><code class="code-wrapper" data-trim data-line-numbers = "2,3">
+          <svg width="6in" height="4.5in" viewBox="0 0 600 450">
+            <title>Network</title>
+            <desc>An example of a computer network based on a hub</desc>
+          </svg>
+        </code></pre>
+
+          <pre class="code-wrapper">
+            title - Provides a human-readable title for the element that contains it.
+          </pre>
+          <pre class="code-wrapper">
+            desc - Provides a longer more complete description of an element that contains it.          
+        </pre>
+        </section>
+      </section>
+
     </div>
   </div>
 
