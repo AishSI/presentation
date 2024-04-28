@@ -70,3 +70,7 @@
 .small-text {
   font-size: 20px;
 }
+
+.span-align-left {
+  text-align: left;
+}

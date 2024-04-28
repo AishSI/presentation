@@ -338,6 +338,7 @@
 
       </section>
 
+
       <!-- Basic Shapes -->
       <section>
 
@@ -462,10 +463,13 @@
         </section>
 
         <section>
+
           <div class="dark-background">
             <p>&lt; ellipse &gt;</p>
           </div>
+
           <div class="gradient-bqckground" style="padding: 10px;">
+
             <pre><code class="js" data-trim data-line-numbers>
               <script type="text/template">
                 <svg width="250" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -613,10 +617,8 @@
       </section>
 
 
-
-
-
       <!-- ACESSIBILITY -->
+
       <section>
         <section>
           <h3>ACESSIBILITY</h3>
@@ -628,7 +630,8 @@
           <h4>Accessible SVG?</h4>
           <p>Scalable Vector Graphics [SVG] is an Extensible Markup Language (XML) application for producing Web
             graphics. SVG provides many accessibility benefits to disabled users, some originating from the vector
-            graphics model, some inherited because SVG is built on top of XML, and some in the design of SVG itself, for
+            graphics model, some inherited because SVG is built on top of XML, and some in the design of SVG itself,
+            for
             example, SVG-specific elements for alternative equivalents.</p>
         </section>
 
@@ -693,7 +696,8 @@
 
           <div class="l-double_smal-left gradient-bqckground">
             <span class="cell-table">&lt;title&gt;</span>
-            <span class="cell-table">Using &lt;title&gt; content authors can provide short description of the image and
+            <span class="cell-table">Using &lt;title&gt; content authors can provide short description of the image
+              and
               the shapes or any important information &lt;svg&gt; contains.</span>
 
             <span class="cell-table">Lang attribute</span>
@@ -702,7 +706,8 @@
               attribute.</span>
 
             <span class="cell-table">&lt;desc&gt;</span>
-            <span class="cell-table">While the &lt;title&gt; provide a simple alternate text, &lt;desc&gt; will provide
+            <span class="cell-table">While the &lt;title&gt; provide a simple alternate text, &lt;desc&gt; will
+              provide
               a precise description of the container.</span>
 
             <span class="cell-table">&lt;g&gt;</span>
@@ -741,6 +746,243 @@
             desc - Provides a longer more complete description of an element that contains it.          
         </pre>
         </section>
+      </section>
+
+      <!-- ANIMATION -->
+
+      <section>
+        <section>
+          <h3>ANIMATION</h3>
+          <img class="r-stretch" src="./assets/image_processing.png">
+        </section>
+
+        <section>
+          <h6>Animation using CSS</h6>
+          <p style="width: 200px; font-size: 20px; text-align: center; font-weight: bold; background-color: #7c7b7a;">
+            SVG</p>
+          <pre><code class="js" data-trim data-line-numbers>
+            <svg viewBox="0 0 200 600">
+              <path id=" dancing-queen" d="M26, 81.12 ... "></path>
+            </svg>
+          </code></pre>
+
+          <p style="width: 200px; font-size: 20px; text-align: center; font-weight: bold; background-color: #7c7b7a;">
+            CSS</p>
+          <pre><code class="CSS" data-trim data-line-numbers>
+            <script type="text/template">
+              .left-leg {
+                fill: orange;
+                animation: dance 2s infinite alternate;
+              }
+              
+              @keyframes dance {
+                100% {
+                  transform: rotate(3deg);
+                }
+              }
+            </script>
+          </code></pre>
+
+        </section>
+
+        <section>
+          <h6>Animation using JS</h6>
+          <ul>
+            <li>Snap.svg</li>
+            <li>SVG.js</li>
+            <li>D3.js</li>
+            <li>GreenSock</li>
+            <li>and others...</li>
+          </ul>
+
+        </section>
+
+        <section>
+          <h6>SVG animation with SMIL</h6>
+          <p>In SVG, we have four animation elements which sets or animates SVG graphics:</p>
+          <div class="gradient-bqckground">
+            <ul>
+              <li>&lt; set &gt;</li>
+              <li>&lt; animate &gt;</li>
+              <li>&lt; animateTransform &gt;</li>
+              <li>&lt; animateMotion &gt;</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h6>SVG &lt;set&gt;</h6>
+
+          <pre><code class="js" data-trim data-line-numbers style="font-size: 16px;">
+            <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="25" style="fill:red;">
+              <set attributeName="r" to="50" begin="3s" />
+            </svg>
+          </code></pre>
+
+          <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="25" style="fill:red;">
+              <set attributeName="r" to="50" begin="3s" />
+          </svg>
+
+          <div class="l-double_smal-left small-text gradient-bqckground span-align-left" style="padding: 10px;">
+            <div style="text-align: center;">
+              <p>&lt;attributeName&gt;</p>
+              <p>&lt;to&gt;</p>
+              <p>&lt;begin&gt;</p>
+            </div>
+
+            <div style="text-align: left;">
+              <p> attribute in the &lt;set&gt; element defines which attribute to change</p>
+              <p> attribute in the &lt;set&gt; element defines the new value for the attribute</p>
+              <p> attribute in the &lt;set&gt; element defines when the animation should start</p>
+            </div>
+          </div>
+
+        </section>
+
+        <section>
+          <h6>SVG &lt;animate&gt;</h6>
+
+          <pre><code class="js" data-trim data-line-numbers style="font-size: 14px;">
+            <svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="50" style="fill:red;">
+                <animate
+                  attributeName="cx"
+                  begin="0s"
+                  dur="8s"
+                  from="50"
+                  to="90%"
+                  repeatCount="indefinite" />
+              </circle>
+            </svg>
+          </code></pre>
+
+          <svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="50" style="fill:red;">
+              <animate attributeName="cx" begin="0s" dur="8s" from="50" to="90%" repeatCount="indefinite" />
+            </circle>
+          </svg>
+
+          <div class="l-double_smal-left small-text gradient-bqckground span-align-left" style="padding: 10px;">
+            <div style="text-align: center;">
+              <p>&lt;attributeName&gt;</p>
+              <p>&lt;begin&gt;</p>
+              <p>&lt;dur&gt;</p>
+              <p>&lt;from&gt;</p>
+              <p>&lt;to&gt;</p>
+              <p>&lt;repeatCount&gt;</p>
+            </div>
+
+            <div style="text-align: left;">
+              <p> attribute defines which attribute to animate</p>
+              <p> attribute defines when the animation should start</p>
+              <p> attribute defines the duration of the animation</p>
+              <p> attribute defines the starting value</p>
+              <p> attribute defines the ending value</p>
+              <p> attribute defines how many times the animation should play</p>
+            </div>
+          </div>
+
+        </section>
+
+        <section>
+          <h6>SVG &lt;animateTransform&gt;</h6>
+
+          <pre><code class="js" data-trim data-line-numbers style="font-size: 16px;">
+            <script type="text/template">
+            <svg width="200" height="180" xmlns="http://www.w3.org/2000/svg">
+              <rect x="30" y="30" height="110" width="110" style="stroke:green;fill:red">
+                <animateTransform attributeName="transform" begin="0s" dur="10s" type="rotate"
+                  from="0 85 85" to="360 85 85" repeatCount="indefinite" />
+              </rect>
+            </svg>
+          </script>
+          </code></pre>
+
+          <svg width="200" height="180" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="30" height="110" width="110" style="stroke:green;fill:red">
+              <animateTransform attributeName="transform" begin="0s" dur="10s" type="rotate" from="0 85 85"
+                to="360 85 85" repeatCount="indefinite" />
+            </rect>
+          </svg>
+
+          <div class="l-double_smal-left small-text gradient-bqckground span-align-left" style="padding: 10px;">
+            <div style="text-align: center;">
+              <p>&lt;attributeName&gt;</p>
+              <p>&lt;begin&gt;</p>
+              <p>&lt;dur&gt;</p>
+              <p>&lt;type&gt;</p>
+              <p>&lt;from&gt;</p>
+              <p>&lt;to&gt;</p>
+              <p>&lt;repeatCount&gt;</p>
+            </div>
+
+            <div style="text-align: left;">
+              <p> attribute animates the transform attribute of the &lt;rect&gt; element</p>
+              <p> attribute defines when the animation should start</p>
+              <p> attribute defines the duration of the animation</p>
+              <p> attribute defines the type of transformation</p>
+              <p> attribute defines the starting value</p>
+              <p> attribute defines the ending value</p>
+              <p> attribute defines how many times the animation should play</p>
+            </div>
+          </div>
+
+        </section>
+
+
+        <section>
+          <h6>SVG &lt;animateMotion&gt;</h6>
+
+          <pre><code class="js" data-trim data-line-numbers style="font-size: 12px;">
+            <svg width="100%" height="150" xmlns="http://www.w3.org/2000/svg">
+              <rect x="45" y="18" width="155" height="45" style="stroke:green;fill:none;">
+                <animateMotion
+                  path="M0,0 q60,100 100,0 q60,-20 100,0"
+                  begin="0s"
+                  dur="10s"
+                  repeatCount="indefinite" />
+              </rect>
+              <text x="50" y="50" style="font-family:Verdana;font-size:32">It's SVG!
+                <animateMotion
+                  path="M0,0 q60,100 100,0 q60,-20 100,0"
+                  begin="0s"
+                  dur="10s"
+                  repeatCount="indefinite" />
+            </text>
+            </svg>
+          </code></pre>
+
+          <svg width="100%" height="150" xmlns="http://www.w3.org/2000/svg">
+            <rect x="45" y="18" width="155" height="45" style="stroke:green;fill:none;">
+              <animateMotion path="M0,0 q60,100 100,0 q60,-20 100,0" begin="0s" dur="10s" repeatCount="indefinite" />
+            </rect>
+            <text x="50" y="50" style="font-family:Verdana;font-size:32">It's SVG!
+              <animateMotion path="M0,0 q60,100 100,0 q60,-20 100,0" begin="0s" dur="10s" repeatCount="indefinite" />
+            </text>
+          </svg>
+
+          <div class="l-double_smal-left small-text gradient-bqckground span-align-left" style="padding: 10px;">
+            <div style="text-align: center;">
+              <p>&lt;path&gt;</p>
+              <p>&lt;begin&gt;</p>
+              <p>&lt;dur&gt;</p>
+              <p>&lt;repeatCount&gt;</p>
+            </div>
+
+            <div style="text-align: left;">
+              <p>attribute defines the path of the animation</p>
+              <p>attribute defines when the animation should start</p>
+              <p>attribute defines the duration of the animation</p>
+              <p>attribute defines how many times the animation should play</p>
+            </div>
+          </div>
+
+        </section>
+
+
+
       </section>
 
     </div>
