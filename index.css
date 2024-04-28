@@ -3,10 +3,26 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.l-double > .l-double-p {
+  margin: 10px;
+  font-size: 18px;
+  text-align: left;
+  color: #000000;
+  text-shadow: none;
+  border-bottom: 1px solid #000000;
+}
+
 .l-double_smal-left {
   display: grid;
   font-size: 20px;
   grid-template-columns: 1fr 3fr;
+}
+
+.l-double_smal-right {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 4fr 1fr;
+  font-size: 20px;
 }
 
 .cell-table {
@@ -32,6 +48,10 @@
 
 .light-gray-background {
   background-color: #979797;
+}
+
+.dark-background {
+  background-color: #000000;
 }
 
 .small-text {
