@@ -50,11 +50,170 @@
 
 
 
-      <!-- <section></section> -->
-
+      <!-- MODES -->
       <section>
-        <h3>Modes</h3>
-        <img class="r-stretch" src="./assets/modesSVG.jpg">
+        <section>
+          <h3>Modes</h3>
+          <img class="r-stretch" src="./assets/modesSVG.jpg">
+        </section>
+
+        <section>
+          <h6>Inline</h6>
+          <pre><code class="js" data-trim data-line-numbers>
+            <svg width="100%" height="100%">
+              <rect width="100%" height="100%" fill="red" />
+              <circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" />
+              <polygon points="120,0 240,225 0,225" fill="green"/>
+              <text x="50" y="100" font-family="Verdana" font-size="55"
+                    fill="white" stroke="black" stroke-width="2">
+                      Hello!
+              </text>
+            </svg>
+          </code></pre>
+
+          <div class="l-double">
+            <span>Pros</span>
+            <span>Cons</span>
+          </div>
+          <div class="l-double small-text gradient-bqckground">
+
+            <ul class="r-stretch" style="padding: 5px;">
+              <li>Putting your SVG inline saves an HTTP request</li>
+              <li>You can assign classes and ids to SVG elements and style them with CSS</li>
+              <li>Lets you use CSS interactions (like :focus) and CSS animations on your SVG image </li>
+              <li>You can make SVG markup into a hyperlink by wrapping it in an &lt;a&gt; element.</li>
+            </ul>
+            <ul class="r-stretch" style="padding: 5px;">
+              <li>Duplication makes for resource-intensive maintenance.</li>
+              <li>Extra SVG code increases the size of your HTML file.</li>
+              <li>The browser cannot cache inline SVG as it would cache regular image assets</li>
+            </ul>
+
+          </div>
+
+
+        </section>
+
+        <section>
+          <h6>&lt; IMG &gt;</h6>
+          <p style="font-size: 20px; text-align: left; font-weight: bold;">&lt; img &gt; - HTML</p>
+          <pre><code class="js" data-trim data-line-numbers>
+            <script type="text/template">
+              <img
+              src="equilateral.svg"
+              alt="triangle with all three sides equal"
+              height="87"
+              width="100" />
+            </script>
+          </code></pre>
+          <p style="font-size: 20px; text-align: left; font-weight: bold;">background-image - CSS</p>
+          <pre><code class="js" data-trim data-line-numbers>
+            <script type="text/template">
+              background-image: url("image.svg");
+              background-size: contain;
+            </script>
+          </code></pre>
+
+          <div class="l-double">
+            <span>Pros</span>
+            <span>Cons</span>
+          </div>
+
+          <div class="l-double small-text gradient-bqckground">
+            <ul class="r-stretch" style="padding: 5px;">
+              <li>Quick, familiar image syntax with built-in text equivalent available in the alt attribute.</li>
+              <li>You can make the image into a hyperlink easily by nesting the &lt;img&gt; inside an &lt;a&gt; element.
+              </li>
+              <li>The SVG file can be cached by the browser</li>
+            </ul>
+            <ul class="r-stretch" style="padding: 5px;">
+              <li>You cannot manipulate the image with JavaScript.</li>
+              <li>External stylesheets invoked from the SVG file take no effect.</li>
+              <li>You cannot restyle the image with CSS pseudoclasses (like :focus).</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h6>&lt; Object &gt;</h6>
+          <p style="font-size: 20px; text-align: left; font-weight: bold;">Object</p>
+          <pre><code class="js" data-trim data-line-numbers>
+            <script type="text/template">
+              <object type="image/svg+xml" data=”your.svg" id=’object’ class=’icon’></object>
+            </script>              
+          </code></pre>
+
+          <p style="font-size: 20px; text-align: left; font-weight: bold;">interaction with svg in an object:</p>
+          <pre><code class="js" data-trim data-line-numbers>
+            <script type="text/template">
+              var object = document.getElementById("’object’");
+              var svgDocument = object.contentDocument;
+              var svgElement = svgDocument.getElementById("some_id_in_svg");
+              svgElement.setAttribute("fill", "black");
+            </script>              
+          </code></pre>
+
+          <div class="l-double" style="background-color: aliceblue; color: black;">
+            <span>&lt; Iframe &gt;</span>
+            <span>&lt; Embed &gt;</span>
+          </div>
+
+          <div class="l-double small-text gradient-bqckground">
+            <pre><code class="js" data-trim data-line-numbers>
+              <script type="text/template">
+                <iframe src="image.svg"></iframe>
+              </script>              
+            </code></pre>
+            <pre><code class="js" data-trim data-line-numbers>
+              <script type="text/template">
+                <embed type="image/svg+xml" src="image.svg" />
+              </script>              
+            </code></pre>
+
+
+
+          </div>
+        </section>
+
+
+        <section>
+          <h6>&lt; Sprite &gt; !</h6>
+          <p style="font-size: 20px; text-align: left; font-weight: bold;">SVG sprite file</p>
+          <pre><code class="js" data-trim data-line-numbers>
+            <script type="text/template">
+              <svg xmlns="http://www.w3.org/2000/svg">
+                ...
+                <symbol id="social-vk" viewBox="0 0 6 12">
+                  <path d="M1.09903 2.72854C1.09903 ..."/>
+                </symbol>              
+                ...
+              </svg>
+            </script>              
+          </code></pre>
+
+          <p style="font-size: 20px; text-align: left; font-weight: bold;">HTML:</p>
+          <pre><code class="js" data-trim data-line-numbers>
+            <script type="text/template">
+              <svg class="social-icon" viewBox="0 0 24 24" width="24" height="24">
+                <use href="sprite.svg#social-vk" x="0" y="0"></use>
+              </svg>
+            </script>              
+          </code></pre>
+
+          <p style="font-size: 20px; text-align: left; font-weight: bold;">CSS:</p>
+          <pre><code class="js" data-trim data-line-numbers>
+            <script type="text/template">
+              .social-icon {
+                background-color: black;
+                fill: white;
+                transition: fill 0.3s ease-in-out;
+              }      
+            </script>              
+          </code></pre>
+
+        </section>
+
+
       </section>
 
       <section>
@@ -74,12 +233,9 @@
       </section>
 
 
-      <!-- MODES -->
-      <!-- <section></section> -->
 
       <!-- ACESSIBILITY -->
       <section>
-
         <section>
           <h3>ACESSIBILITY</h3>
           <img class="r-stretch" src="./assets/acessibility.jpg">

@@ -33,3 +33,7 @@
 .light-gray-background {
   background-color: #979797;
 }
+
+.small-text {
+  font-size: 20px;
+}
