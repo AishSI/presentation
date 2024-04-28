@@ -391,7 +391,6 @@
           </div>
         </section>
 
-
         <section>
           <div class="dark-background">
             <p>&lt; polygon &gt;</p>
@@ -416,6 +415,44 @@
               a y coordinate.</p>
             <p class="l-double-p">So, the list (0,0), (1,1), and (2,2) could be written as 0, 0 1, 1 2, 2.</p>
           </div>
+        </section>
+
+        <section>
+
+          <div class="dark-background">
+            <p>&lt; path &gt;</p>
+          </div>
+
+          <div class="gradient-bqckground" style="padding: 10px;">
+
+            <pre><code class="js" data-trim data-line-numbers>
+              <script type="text/template">
+                <svg width="250" height="150" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20,30 Q140,105 50,130 T90,20" fill="none" stroke="blue" stroke-width="5"/>
+                </svg>
+              </script> 
+            </code></pre>
+
+            <svg width="250" height="150" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20,30 Q140,105 50,130 T90,20" fill="none" stroke="blue" stroke-width="5" />
+
+            </svg>
+
+          </div>
+
+          <div class="l-double small-text" style="background-color: aliceblue;">
+            <p class="l-double-p">M = moveto</p>
+            <p class="l-double-p">L = lineto</p>
+            <p class="l-double-p">H = horizontal lineto</p>
+            <p class="l-double-p">V = vertical lineto</p>
+            <p class="l-double-p">C = curveto</p>
+            <p class="l-double-p">S = smooth curveto</p>
+            <p class="l-double-p">Q = quadratic Bézier curve</p>
+            <p class="l-double-p">T = smooth quadratic Bézier curveto</p>
+            <p class="l-double-p">A = elliptical Arc</p>
+            <p class="l-double-p">Z = closepath </p>
+          </div>
+
         </section>
 
 
