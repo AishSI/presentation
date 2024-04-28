@@ -51,8 +51,6 @@
         </section>
       </section>
 
-
-
       <!-- MODES -->
       <section>
         <section>
@@ -214,6 +212,143 @@
           </code></pre>
 
         </section>
+
+      </section>
+
+      <!-- COORDINATES -->
+      <section>
+
+        <section>
+          <h3>Coordinates</h3>
+          <img class="r-stretch" src="./assets/viewport1_1.png">
+          <p class="small-text">For all elements, SVG uses a coordinate system or grid system similar to the one used by
+            canvas (and by a
+            whole lot of other computer drawing routines). That is, the top left corner of the document is considered to
+            be the point (0,0), or point of origin.</p>
+        </section>
+
+        <section>
+          <h6>SVG canvas & viewport</h6>
+          <img class="r-stretch" src="./assets/viewport2_1.png">
+          <div class="gradient-bqckground" style="padding: 10px;">
+            <pre><code class="js" data-trim data-line-numbers>
+              <script type="text/template">
+                <svg width="900" height="500" viewBox="220 125 450 250">
+                  ...
+                </svg>
+              </script> 
+            </code></pre>
+          </div>
+          <p class="small-text" style="border-left: 5px solid orange; text-align: left; padding-left: 10px;">All SVG
+            content is drawn inside
+            SVG viewports.
+            Every SVG viewport defines a drawing
+            region characterized by
+            size (width, height), and an origin, measured in abstract user units. ( W3C)</p>
+
+          <p class="small-text">According to a code snippet, viewBox defines a specific canvas area, covering a
+            rectangular with the origin point (220,125), the width=450 and the height=250. Then the SVG image is cropped
+            to that area and scaled up to fill the entire viewport.</p>
+        </section>
+
+        <section>
+          <h6>preserveAspectRatio</h6>
+          <img class="r-stretch" src="./assets/preserveAspect.jpg" style="height: 200px;">
+          <div class="gradient-bqckground" style="padding: 10px;">
+            <pre><code class="js " data-trim>
+              <script type="text/template">
+                <align> =
+                  none
+                  | xMinYMin | xMidYMin | xMaxYMin
+                  | xMinYMid | xMidYMid | xMaxYMid
+                  | xMinYMax | xMidYMax | xMaxYMax
+                <meetOrSlice> = meet | slice
+              </script> 
+            </code></pre>
+          </div>
+
+        </section>
+
+        <section>
+
+          <div class="l-double ">
+            <pre><code class="js " data-trim style="font-size: 20px; text-align: center;">
+              <script type="text/template">
+                preserveAspectRatio=”xMidYMid meet”
+              </script> 
+            </code></pre>
+            <pre><code class="js " data-trim style="font-size: 20px; text-align: center;">
+              <script type="text/template">
+                preserveAspectRatio=”xMidYMid slice
+              </script> 
+            </code></pre>
+          </div>
+
+
+          <div>
+            <img class="r-stretch" src="./assets/meet_slice.jpg" style="width: 100%;">
+          </div>
+
+          <div class="l-double" style="background-color: aliceblue; color: black;">
+            <span>meet</span>
+            <span>slice</span>
+          </div>
+
+          <div class="l-double small-text gradient-bqckground">
+            <ul class="r-stretch" style="padding: 5px;">
+              <li>aspect ratio is preserved</li>
+              <li>the entire ‘viewBox’ is visible within the SVG viewport</li>
+              <li>the ‘viewBox’ is scaled up as much as possible, while still meeting the other criteria</li>
+            </ul>
+            <ul class="r-stretch" style="padding: 5px;">
+              <li>aspect ratio is preserved</li>
+              <li>the entire SVG viewport is covered by the ‘viewBox’</li>
+              <li>the ‘viewBox’ is scaled down as much as possible, while still meeting the other criteria</li>
+            </ul>
+          </div>
+
+        </section>
+
+        <section>
+
+          <div>
+            <pre><code class="js " data-trim style="font-size: 20px; text-align: center;">
+              <script type="text/template">
+                preserveAspectRatio=”xMidYMid none”
+              </script> 
+            </code></pre>
+          </div>
+
+
+          <div>
+            <img class="r-stretch" src="./assets/aspectratio_none.png" style="width: 100%;">
+          </div>
+
+          <div style="background-color: aliceblue; color: black;">
+            <span>none</span>
+          </div>
+
+          <div class="small-text gradient-bqckground">
+            <p style="font-size: 28px;">If you set preserveAspectRatio=”none” instead of the standard value, the image
+              would stretch to match the
+              size of the viewPort.</p>
+          </div>
+
+        </section>
+
+
+        <!-- <p class="small-text" style="border-left: 5px solid orange; text-align: left; padding-left: 10px;">All SVG
+            content is drawn inside
+            SVG viewports.
+            Every SVG viewport defines a drawing
+            region characterized by
+            size (width, height), and an origin, measured in abstract user units. ( W3C)</p>
+
+          <p class="small-text">According to a code snippet, viewBox defines a specific canvas area, covering a
+            rectangular with the origin point (220,125), the width=450 and the height=250. Then the SVG image is cropped
+            to that area and scaled up to fill the entire viewport.</p> -->
+
+
 
       </section>
 
