@@ -3,7 +3,13 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.l-double > .l-double-p {
+.l-triple {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.l-double > .l-double-p,
+.l-triple > .l-double-p {
   margin: 10px;
   font-size: 18px;
   text-align: left;
@@ -12,11 +18,11 @@
   border-bottom: 1px solid #000000;
 }
 
-.l-double.svg-background {
+.l-triple.svg-background {
   background-image: url("./assets/curveSVG.jpg");
   background-repeat: no-repeat;
   background-size: 30%;
-  background-position: 48% center;
+  background-position: 50% 75%;
 }
 
 .l-double_smal-left {

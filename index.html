@@ -336,20 +336,6 @@
 
         </section>
 
-
-        <!-- <p class="small-text" style="border-left: 5px solid orange; text-align: left; padding-left: 10px;">All SVG
-            content is drawn inside
-            SVG viewports.
-            Every SVG viewport defines a drawing
-            region characterized by
-            size (width, height), and an origin, measured in abstract user units. ( W3C)</p>
-
-          <p class="small-text">According to a code snippet, viewBox defines a specific canvas area, covering a
-            rectangular with the origin point (220,125), the width=450 and the height=250. Then the SVG image is cropped
-            to that area and scaled up to fill the entire viewport.</p> -->
-
-
-
       </section>
 
       <!-- Basic Shapes -->
@@ -401,12 +387,15 @@
 
           </div>
 
-          <div class="l-double svg-background dark-background">
+          <div class="l-triple svg-background dark-background">
             <p>&lt; rect &gt;</p>
+            <p>&lt; ellipse &gt;</p>
             <p>&lt; polyline &gt;</p>
             <p>&lt; circle &gt;</p>
+            <p></p>
             <p>&lt; polygon &gt;</p>
             <p>&lt; line &gt;</p>
+            <p></p>
             <p>&lt; path &gt;</p>
           </div>
         </section>
@@ -471,6 +460,34 @@
             <p class="l-double-p">"yx" - The y position of the center of the circle.</p>
           </div>
         </section>
+
+        <section>
+          <div class="dark-background">
+            <p>&lt; ellipse &gt;</p>
+          </div>
+          <div class="gradient-bqckground" style="padding: 10px;">
+            <pre><code class="js" data-trim data-line-numbers>
+              <script type="text/template">
+                <svg width="250" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="125" cy="125" rx="100" ry="50" stroke="chocolate" fill="transparent" stroke-width="5"/>
+                </svg>
+              </script> 
+            </code></pre>
+
+            <svg width="250" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="125" cy="125" rx="100" ry="50" stroke="chocolate" fill="transparent" stroke-width="5" />
+            </svg>
+
+          </div>
+
+          <div class="l-double small-text" style="background-color: aliceblue;">
+            <p class="l-double-p">"rx" - The x radius of the ellipse.</p>
+            <p class="l-double-p">"ry" - The y radius of the ellipse.</p>
+            <p class="l-double-p">"cx" - The x position of the center of the ellipse.</p>
+            <p class="l-double-p">"yx" - The y position of the center of the ellipse.</p>
+          </div>
+        </section>
+
 
         <section>
           <div class="dark-background">
