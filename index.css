@@ -12,6 +12,13 @@
   border-bottom: 1px solid #000000;
 }
 
+.l-double.svg-background {
+  background-image: url("./assets/curveSVG.jpg");
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: 48% center;
+}
+
 .l-double_smal-left {
   display: grid;
   font-size: 20px;
