@@ -14,6 +14,10 @@
 
   <!-- Theme used for syntax highlighted code -->
   <link rel="stylesheet" href="plugin/highlight/monokai.css">
+  <!-- <link rel="stylesheet" href="plugin/highlight/zenburn.css"> -->
+
+  <link rel="stylesheet" href="./index.css">
+
 </head>
 
 <body>
@@ -123,10 +127,60 @@
       </section>
 
       <section>
+
         <section>
           <h4>Equivalent Alternatives</h4>
           <p>Providing an alternative equivalent for inaccessible content is one of the primary ways authors can make
             their documents accessible to people with disabilities. </p>
+        </section>
+
+        <section>
+          <h4>SVG as a container</h4>
+          <p>In addition to having an .svg image,</p>
+          <p> Scalable Vector Graphics:</p>
+          <div class="gradient-bqckground">
+            <ul>
+              <li>Can have an image within a SVG, shape etc</li>
+              <li>Can have text</li>
+              <li>Can have a link</li>
+              <li>Can have any structural element</li>
+            </ul>
+          </div>
+        </section>
+
+
+
+        <section>
+          <h4>&lt;SVG&gt; allows the following elements and attributes related to accessibility.</h4>
+
+          <div class="l-double_smal-left gradient-bqckground">
+            <span class="cell-table">&lt;title&gt;</span>
+            <span class="cell-table">Using &lt;title&gt; content authors can provide short description of the image and
+              the shapes or any important information &lt;svg&gt; contains.</span>
+
+            <span class="cell-table">Lang attribute</span>
+            <span class="cell-table">In latest versions of SVG content authors can provide multiple titles with
+              different values for lang
+              attribute.</span>
+
+            <span class="cell-table">&lt;desc&gt;</span>
+            <span class="cell-table">While the &lt;title&gt; provide a simple alternate text, &lt;desc&gt; will provide
+              a precise description of the container.</span>
+
+            <span class="cell-table">&lt;g&gt;</span>
+            <span class="cell-table">Each group can have different &lt;title&gt; and &lt;desc&gt; elements. This
+              grouping allows the content authors to provide more content and context of the content in
+              &lt;svg&gt;.</span>
+
+            <span class="cell-table">&lt;text&gt;</span>
+            <span class="cell-table">The content available in the &lt;text&gt; element is visible on the screen and is
+              read by most of the screen readers.</span>
+
+            <span class="cell-table">ARIA roles, states and properties</span>
+            <span class="cell-table">To additionally support the elements and controls in svg, content authors can
+              depend on WAI ARIA roles, states and properties.</span>
+          </div>
+
         </section>
 
         <section>
@@ -135,7 +189,7 @@
           <span> / </span>
           <span>desc</span>
 
-          <pre><code class="code-wrapper" data-trim data-line-numbers = "2,3">
+          <pre><code class="code-wrapper " data-trim data-line-numbers = "2,3">
           <svg width="6in" height="4.5in" viewBox="0 0 600 450">
             <title>Network</title>
             <desc>An example of a computer network based on a hub</desc>

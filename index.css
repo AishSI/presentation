@@ -1,0 +1,35 @@
+.l-double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.l-double_smal-left {
+  display: grid;
+  font-size: 20px;
+  grid-template-columns: 1fr 3fr;
+}
+
+.cell-table {
+  padding: 0px 10px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+}
+
+.gradient-bqckground {
+  background-color: #652487;
+  background-image: linear-gradient(
+    160deg,
+    #652487 0,
+    #443ac3 35%,
+    #0174b7 68%,
+    #04988e 100%
+  );
+  color: #e7e4eb;
+}
+
+.light-gray-background {
+  background-color: #979797;
+}
